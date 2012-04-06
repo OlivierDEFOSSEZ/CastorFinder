@@ -11,27 +11,7 @@ namespace Pollux.DataBase
 {
     static public partial class SqlDataProvider  
     {
-        static public bool ajouterClient(Client c)
-        {
-            bool ajout;
-            // si pas de connexion
-            if (!DBConnect())
-                ajout = false;
-            // si connexion
-            else
-            {
-                string requete = string.Format("INSERT INTO CLIENTS (NOM_C, CODE_POSTAL_V) VALUES (N'{0}',N'{1}')", ville.Nom, ville.CodePostal);
-                OleDbCommand command = new OleDbCommand(requete, connect);
-                int rowCount = command.ExecuteNonQuery();
-                if (rowCount == 1)
-                    ajout = true;  // ajout effectué
-                else
-                    ajout = false; // ajout non effectué
-                // déconnexion
-                connect.Close();
-            }
-            return ajout;
-        }
+        
         static public List<string> GetListeNomClients()
         {
             List<string> listeNomClients = new List<string>() ;
@@ -49,6 +29,8 @@ namespace Pollux.DataBase
             }
             return listeNomClients;
         }
+
+
         static public List<string> GetListeNomClients(string prenomAgent)
         {
             List<string> listeNomClients = new List<string>();

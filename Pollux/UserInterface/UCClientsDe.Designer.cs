@@ -32,8 +32,8 @@
             this.comboBoxAgents = new System.Windows.Forms.ComboBox();
             this.listBoxClients = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAfficher = new System.Windows.Forms.Button();
+            this.buttonAjouter = new System.Windows.Forms.Button();
             this.groupBoxClientsDe.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,8 +42,8 @@
             this.groupBoxClientsDe.Controls.Add(this.comboBoxAgents);
             this.groupBoxClientsDe.Controls.Add(this.listBoxClients);
             this.groupBoxClientsDe.Controls.Add(this.label11);
-            this.groupBoxClientsDe.Controls.Add(this.button1);
-            this.groupBoxClientsDe.Controls.Add(this.button2);
+            this.groupBoxClientsDe.Controls.Add(this.buttonAfficher);
+            this.groupBoxClientsDe.Controls.Add(this.buttonAjouter);
             this.groupBoxClientsDe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxClientsDe.Location = new System.Drawing.Point(0, 30);
             this.groupBoxClientsDe.Name = "groupBoxClientsDe";
@@ -77,24 +77,25 @@
             this.label11.TabIndex = 5;
             this.label11.Text = "Agent :";
             // 
-            // button1
+            // buttonAfficher
             // 
-            this.button1.Location = new System.Drawing.Point(401, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Afficher";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAfficher.Location = new System.Drawing.Point(401, 18);
+            this.buttonAfficher.Name = "buttonAfficher";
+            this.buttonAfficher.Size = new System.Drawing.Size(75, 23);
+            this.buttonAfficher.TabIndex = 4;
+            this.buttonAfficher.Text = "Afficher";
+            this.buttonAfficher.UseVisualStyleBackColor = true;
+            this.buttonAfficher.Click += new System.EventHandler(this.buttonAfficher_Click);
             // 
-            // button2
+            // buttonAjouter
             // 
-            this.button2.Location = new System.Drawing.Point(369, 209);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Ajouter une visite";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonAjouter.Location = new System.Drawing.Point(369, 209);
+            this.buttonAjouter.Name = "buttonAjouter";
+            this.buttonAjouter.Size = new System.Drawing.Size(107, 23);
+            this.buttonAjouter.TabIndex = 4;
+            this.buttonAjouter.Text = "Ajouter une visite";
+            this.buttonAjouter.UseVisualStyleBackColor = true;
+            this.buttonAjouter.Click += new System.EventHandler(this.buttonAjouter_Click);
             // 
             // UCClientsDe
             // 
@@ -114,9 +115,9 @@
 
         private System.Windows.Forms.GroupBox groupBoxClientsDe;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAjouter;
         private System.Windows.Forms.ListBox listBoxClients;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAfficher;
         private System.Windows.Forms.ComboBox comboBoxAgents;
     }
 }

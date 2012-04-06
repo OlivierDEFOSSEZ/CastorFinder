@@ -8,25 +8,27 @@ namespace Pollux.Object
     public class Visite
     {
         private DateTime m_dateHeure;
+        private Client m_client;
+        private Bien m_bien;
 
+        #region Propriétés
         public DateTime DateHeure
         {
             get { return m_dateHeure; }
             set { m_dateHeure = value; }
         }
-        private Client m_client;
-
         public Client Client
         {
             get { return m_client; }
             set { m_client = value; }
         }
-        private Bien m_bien;
-
         public Bien Bien
         {
             get { return m_bien; }
             set { m_bien = value; }
         }
+        #endregion
+
+
     }
 }

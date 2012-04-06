@@ -36,7 +36,7 @@ namespace Pollux.UserInterface
             List<Ville> listeVilles = SqlDataProvider.GetListeVilles();
             foreach (Ville ville in listeVilles)
             {
-                comboBoxVilles.Items.Add(ville);
+                comboBoxVilles.Items.Add(ville.ToString());
             }
         }
         #endregion
@@ -60,11 +60,7 @@ namespace Pollux.UserInterface
                 {
                     if (comboBoxAgents != null)
                     {
-                        if (SqlDataProvider.ajouterClient(c))
-                            MessageBox.Show("OK", "Ajout client OK");
-                        else
-                            MessageBox.Show("KO", "Ajout client KO !!!");
-
+                        MessageBox.Show("Attention", "erreur SOUHAIT OK BdD");
                         //UCAjouterSouhait(c)
                     }
                 }

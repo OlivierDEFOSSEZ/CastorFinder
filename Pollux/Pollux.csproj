@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBase\ReqVisite.cs" />
+    <Compile Include="DataBase\ReqSouhait.cs" />
+    <Compile Include="DataBase\ReqBien.cs" />
+    <Compile Include="DataBase\ReqAgent.cs" />
     <Compile Include="DataBase\ReqClient.cs" />
     <Compile Include="DataBase\DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
