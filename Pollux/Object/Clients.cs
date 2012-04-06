@@ -30,7 +30,19 @@ namespace Pollux.Object
         }
 
         private Agent m_agent = null;
+
+        public Agent Agent
+        {
+            get { return m_agent; }
+            set { m_agent = value; }
+        }
         private Ville m_ville;
+
+        public Ville Ville
+        {
+            get { return m_ville; }
+            set { m_ville = value; }
+        }
         public Client(string nom, string adresse, string telephone, int index_ville)
         {
             m_nom = nom;
