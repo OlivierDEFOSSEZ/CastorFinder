@@ -12,26 +12,45 @@ namespace Pollux.DataBase
     static public partial class SqlDataProvider  
     {
 
-        static public List<string> GetListePrenomAgents()
+        static public List<Agent> GetListeAgents()
         {
-            List<string> listePrenomAgents = new List<string>();
+            List<Agent> listeAgents = new List<Agent>();
             if (DBConnect())
             {
-                string requete = "SELECT PRÉNOM_A FROM AGENTS ORDER BY PRÉNOM_A";
+                string requete = "SELECT NUM_A, PRÉNOM_A FROM AGENTS ORDER BY PRÉNOM_A";
                 OleDbCommand command = new OleDbCommand(requete, connect);
                 OleDbDataReader reader = command.ExecuteReader();
                 // ajout des prénoms des agents dans la liste
                 while (reader.Read())
                 {
-                    listePrenomAgents.Add(reader.GetString(0));
+                    listeAgents.Add(new Agent(reader.GetInt16(0), reader.GetString(1)));
                 }
                 // déconnexion
                 reader.Close();
                 connect.Close();
             }
-            return listePrenomAgents;
+            return listeAgents;
         }
 
+        // Retrouver une ville à partir de son index
+        static public Agent trouverAgent(int index)
+        {
+            if (DBConnect())
+            {
+                string requete = "SELECT PRÉNOM_A FROM AGENTS WHERE NUM_A = " + index;
+                OleDbCommand command = new OleDbCommand(requete, connect);
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    string prenom = reader.GetString(0);
+                    Agent agent = new Agent(index, prenom);
+                    return agent;
+                }
+                reader.Close();
+                connect.Close();
+            }
+            return null;
+        }
 
         static public Agent GetAgent(Client client)
         {

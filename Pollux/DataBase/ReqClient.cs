@@ -20,7 +20,15 @@ namespace Pollux.DataBase
             // si connexion
             else
             {
-                string requete = string.Format("INSERT INTO CLIENTS (NOM_C, ADRESSE_C, NUM_V, TEL_C) VALUES (N'{0}',N'{1}',N'{2}',N'{3}')", c.Nom, c.Adresse, c.Ville.Index, c.Telephone);
+                string requete;
+                if (c.Agent == null)
+                {
+                    requete = string.Format("INSERT INTO CLIENTS (NOM_C, ADRESSE_C, NUM_V, TEL_C) VALUES (N'{0}',N'{1}',N'{2}',N'{3}')", c.Nom, c.Adresse, c.Ville.Index, c.Telephone);
+                }
+                else
+                {
+                    requete = string.Format("INSERT INTO CLIENTS (NOM_C, ADRESSE_C, NUM_V, TEL_C, NUM_A) VALUES (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')", c.Nom, c.Adresse, c.Ville.Index, c.Telephone, c.Agent.Index);
+                }
                 OleDbCommand command = new OleDbCommand(requete, connect);
                 int rowCount = command.ExecuteNonQuery();
                 if (rowCount == 1)

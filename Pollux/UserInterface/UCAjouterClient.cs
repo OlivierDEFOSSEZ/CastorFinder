@@ -14,7 +14,6 @@ namespace Pollux.UserInterface
 {
     public partial class UCAjouterClient : UserControl
     {
-        
         public UCAjouterClient()
         {
             InitializeComponent();
@@ -25,10 +24,10 @@ namespace Pollux.UserInterface
         #region Chargement des comboBox
         private void loadAgents()
         {
-            List<string> listeAgents = SqlDataProvider.GetListePrenomAgents();
-            foreach (string prenom in listeAgents)
+            List<Agent> listeAgents = SqlDataProvider.GetListeAgents();
+            foreach (Agent agent in listeAgents)
             {
-                comboBoxAgents.Items.Add(prenom);
+                comboBoxAgents.Items.Add(agent);
             }
         }
         private void loadVilles()
@@ -50,7 +49,7 @@ namespace Pollux.UserInterface
         {
             if (textBoxNom.Text != "" && textBoxAdresse.Text != "" && textBoxTelephone.Text != "" && comboBoxVilles.SelectedItem != null)
             {
-                Client c = new Client(textBoxNom.Text, textBoxAdresse.Text, textBoxTelephone.Text, comboBoxVilles.SelectedItem.Index);
+                Client c = new Client(textBoxNom.Text, textBoxAdresse.Text, textBoxTelephone.Text, ((Agent)comboBoxAgents.SelectedItem).Index, ((Ville)comboBoxVilles.SelectedItem).Index);
                 if (radioButtonBien.Checked)
                 {
                     MessageBox.Show("Attention", "erreur BIEN OK BdD");

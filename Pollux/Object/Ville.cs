@@ -41,7 +41,7 @@ namespace Pollux.Object
         {
             m_codePostal = codePostal;
             m_nom = nom;
-            m_index = -1;
+            m_index = SqlDataProvider.trouverVille(codePostal, nom);
         }
        
 

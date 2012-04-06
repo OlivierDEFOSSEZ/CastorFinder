@@ -17,7 +17,14 @@
             set { m_prenom = value; }
         }
         #endregion
-
-
+        public Agent(int index, string prenom)
+        {
+            m_index = index;
+            m_prenom = prenom;
+        }
+        public override string ToString()
+        {
+            return m_prenom;
+        }
     }
 }

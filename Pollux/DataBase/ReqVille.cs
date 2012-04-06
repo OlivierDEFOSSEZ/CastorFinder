@@ -65,20 +65,37 @@ namespace Pollux.DataBase
         {
             if (DBConnect())
             {
-                string requete = "SELECT CODE_POSTAL_V, NOM_V, NUM_V FROM VILLES WHERE NUM_V = " + index;
+                string requete = "SELECT CODE_POSTAL_V, NOM_V FROM VILLES WHERE NUM_V = " + index;
                 OleDbCommand command = new OleDbCommand(requete, connect);
                 OleDbDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
                     int cp = reader.GetInt32(0);
                     string nom = reader.GetString(1);
-                    Ville ville = new Ville(cp, nom);
+                    Ville ville = new Ville(cp, nom, index);
                     return ville;
                 }
                 reader.Close();
                 connect.Close();
             }
             return null;
+        }
+        static public int trouverVille(int codePostal, string nom)
+        {
+            int index = -1;
+            if (DBConnect())
+            {
+                string requete = string.Format("SELECT NUM_V FROM VILLES WHERE NOM_V = N'{0}' AND CODE_POSTAL_V = N'{1}'", nom, codePostal);
+                OleDbCommand command = new OleDbCommand(requete, connect);
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    index = reader.GetInt16(0);
+                }
+                reader.Close();
+                connect.Close();
+            }
+            return index;
         }
 
         // Vérification si la ville passée en paramètre est déjà dans la base

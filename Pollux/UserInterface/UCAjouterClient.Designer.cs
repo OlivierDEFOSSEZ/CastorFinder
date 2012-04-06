@@ -78,7 +78,7 @@
             this.comboBoxVilles.Location = new System.Drawing.Point(107, 79);
             this.comboBoxVilles.Name = "comboBoxVilles";
             this.comboBoxVilles.Size = new System.Drawing.Size(288, 21);
-            this.comboBoxVilles.TabIndex = 5;
+            this.comboBoxVilles.TabIndex = 3;
             // 
             // comboBoxAgents
             // 
@@ -86,7 +86,7 @@
             this.comboBoxAgents.Location = new System.Drawing.Point(244, 181);
             this.comboBoxAgents.Name = "comboBoxAgents";
             this.comboBoxAgents.Size = new System.Drawing.Size(140, 21);
-            this.comboBoxAgents.TabIndex = 4;
+            this.comboBoxAgents.TabIndex = 7;
             // 
             // buttonAnnuler
             // 
@@ -94,7 +94,7 @@
             this.buttonAnnuler.Location = new System.Drawing.Point(401, 182);
             this.buttonAnnuler.Name = "buttonAnnuler";
             this.buttonAnnuler.Size = new System.Drawing.Size(75, 23);
-            this.buttonAnnuler.TabIndex = 3;
+            this.buttonAnnuler.TabIndex = 9;
             this.buttonAnnuler.Text = "Annuler";
             this.buttonAnnuler.UseVisualStyleBackColor = true;
             this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
@@ -104,7 +104,7 @@
             this.buttonCreer.Location = new System.Drawing.Point(401, 209);
             this.buttonCreer.Name = "buttonCreer";
             this.buttonCreer.Size = new System.Drawing.Size(75, 23);
-            this.buttonCreer.TabIndex = 3;
+            this.buttonCreer.TabIndex = 8;
             this.buttonCreer.Text = "Créer";
             this.buttonCreer.UseVisualStyleBackColor = true;
             this.buttonCreer.Click += new System.EventHandler(this.buttonCreer_Click);
@@ -115,7 +115,7 @@
             this.radioButtonSouhait.Location = new System.Drawing.Point(21, 182);
             this.radioButtonSouhait.Name = "radioButtonSouhait";
             this.radioButtonSouhait.Size = new System.Drawing.Size(110, 17);
-            this.radioButtonSouhait.TabIndex = 2;
+            this.radioButtonSouhait.TabIndex = 6;
             this.radioButtonSouhait.TabStop = true;
             this.radioButtonSouhait.Text = "Ajouter un souhait";
             this.radioButtonSouhait.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@
             this.radioButtonBien.Location = new System.Drawing.Point(21, 159);
             this.radioButtonBien.Name = "radioButtonBien";
             this.radioButtonBien.Size = new System.Drawing.Size(96, 17);
-            this.radioButtonBien.TabIndex = 2;
+            this.radioButtonBien.TabIndex = 5;
             this.radioButtonBien.TabStop = true;
             this.radioButtonBien.Text = "Ajouter un bien";
             this.radioButtonBien.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@
             this.textBoxTelephone.Location = new System.Drawing.Point(107, 106);
             this.textBoxTelephone.Name = "textBoxTelephone";
             this.textBoxTelephone.Size = new System.Drawing.Size(288, 20);
-            this.textBoxTelephone.TabIndex = 1;
+            this.textBoxTelephone.TabIndex = 4;
             // 
             // label23
             // 
@@ -171,7 +171,7 @@
             this.textBoxAdresse.Location = new System.Drawing.Point(107, 54);
             this.textBoxAdresse.Name = "textBoxAdresse";
             this.textBoxAdresse.Size = new System.Drawing.Size(288, 20);
-            this.textBoxAdresse.TabIndex = 1;
+            this.textBoxAdresse.TabIndex = 2;
             // 
             // label20
             // 
