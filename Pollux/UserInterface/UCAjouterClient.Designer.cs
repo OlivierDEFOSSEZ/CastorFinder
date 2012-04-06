@@ -107,6 +107,7 @@
             this.buttonCreer.TabIndex = 3;
             this.buttonCreer.Text = "Créer";
             this.buttonCreer.UseVisualStyleBackColor = true;
+            this.buttonCreer.Click += new System.EventHandler(this.buttonCreer_Click);
             // 
             // radioButtonSouhait
             // 

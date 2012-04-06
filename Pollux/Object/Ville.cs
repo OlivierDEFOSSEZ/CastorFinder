@@ -12,7 +12,13 @@ namespace Pollux.Object
         private string m_nom;
         private int m_index;
 
+
         #region Propriétés
+        public int Index
+        {
+            get { return m_index; }
+            set { m_index = value; }
+        }
         public int CodePostal
         {
             get { return m_codePostal; }

@@ -36,7 +36,7 @@ namespace Pollux.UserInterface
             List<Ville> listeVilles = SqlDataProvider.GetListeVilles();
             foreach (Ville ville in listeVilles)
             {
-                comboBoxVilles.Items.Add(ville.ToString());
+                comboBoxVilles.Items.Add(ville);
             }
         }
         #endregion
@@ -50,7 +50,7 @@ namespace Pollux.UserInterface
         {
             if (textBoxNom.Text != "" && textBoxAdresse.Text != "" && textBoxTelephone.Text != "" && comboBoxVilles.SelectedItem != null)
             {
-                Client c = new Client(textBoxNom.Text, textBoxAdresse.Text, textBoxTelephone.Text, comboBoxVilles.SelectedIndex);
+                Client c = new Client(textBoxNom.Text, textBoxAdresse.Text, textBoxTelephone.Text, comboBoxVilles.SelectedItem.Index);
                 if (radioButtonBien.Checked)
                 {
                     MessageBox.Show("Attention", "erreur BIEN OK BdD");
@@ -60,8 +60,11 @@ namespace Pollux.UserInterface
                 {
                     if (comboBoxAgents != null)
                     {
-                        MessageBox.Show("Attention", "erreur SOUHAIT OK BdD");
+                        if (SqlDataProvider.ajouterClient(c))
+                            MessageBox.Show("OK", "ajout client OK BdD");
                         //UCAjouterSouhait(c)
+                        else
+                            MessageBox.Show("KO", "ajout client KO BdD");
                     }
                 }
             }

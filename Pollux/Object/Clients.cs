@@ -15,6 +15,17 @@ namespace Pollux.Object
         private Ville m_ville;
 
         #region Propriétés
+        public Agent Agent
+        {
+            get { return m_agent; }
+            set { m_agent = value; }
+        }
+
+        public Ville Ville
+        {
+            get { return m_ville; }
+            set { m_ville = value; }
+        }
         public string Nom
         {
             get { return m_nom; }
