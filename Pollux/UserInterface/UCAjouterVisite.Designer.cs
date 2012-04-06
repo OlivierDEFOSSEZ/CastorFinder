@@ -31,8 +31,8 @@
             this.groupBoxAjoutVisite = new System.Windows.Forms.GroupBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonAnnuler = new System.Windows.Forms.Button();
+            this.buttonCréer = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label26 = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@
             // 
             this.groupBoxAjoutVisite.Controls.Add(this.textBox8);
             this.groupBoxAjoutVisite.Controls.Add(this.textBox7);
-            this.groupBoxAjoutVisite.Controls.Add(this.button1);
-            this.groupBoxAjoutVisite.Controls.Add(this.button6);
+            this.groupBoxAjoutVisite.Controls.Add(this.buttonAnnuler);
+            this.groupBoxAjoutVisite.Controls.Add(this.buttonCréer);
             this.groupBoxAjoutVisite.Controls.Add(this.dateTimePicker2);
             this.groupBoxAjoutVisite.Controls.Add(this.dateTimePicker1);
             this.groupBoxAjoutVisite.Controls.Add(this.label26);
@@ -81,23 +81,23 @@
             this.textBox7.Size = new System.Drawing.Size(268, 66);
             this.textBox7.TabIndex = 4;
             // 
-            // button1
+            // buttonAnnuler
             // 
-            this.button1.Location = new System.Drawing.Point(401, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Annuler";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Location = new System.Drawing.Point(401, 158);
+            this.buttonAnnuler.Name = "buttonAnnuler";
+            this.buttonAnnuler.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnnuler.TabIndex = 3;
+            this.buttonAnnuler.Text = "Annuler";
+            this.buttonAnnuler.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonCréer
             // 
-            this.button6.Location = new System.Drawing.Point(401, 209);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Créer";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonCréer.Location = new System.Drawing.Point(401, 199);
+            this.buttonCréer.Name = "buttonCréer";
+            this.buttonCréer.Size = new System.Drawing.Size(75, 23);
+            this.buttonCréer.TabIndex = 3;
+            this.buttonCréer.Text = "Créer";
+            this.buttonCréer.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
@@ -190,8 +190,8 @@
         private System.Windows.Forms.GroupBox groupBoxAjoutVisite;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonAnnuler;
+        private System.Windows.Forms.Button buttonCréer;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label26;

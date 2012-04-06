@@ -28,7 +28,8 @@ namespace Pollux.UserInterface
             }
         }
         #endregion
-        private void button1_Click(object sender, EventArgs e)
+
+        private void buttonAfficher_Click(object sender, EventArgs e)
         {
             listBoxClients.Items.Clear();
             if (comboBoxAgents.SelectedItem != null)
@@ -40,5 +41,14 @@ namespace Pollux.UserInterface
                 }
             }
         }
+
+        private void buttonAjouter_Click(object sender, EventArgs e)
+        {
+            // TODO affichage de la fenetre d'ajout d'une visite
+
+
+        }
+
+       
     }
 }

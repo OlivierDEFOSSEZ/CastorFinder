@@ -30,7 +30,7 @@
         {
             this.groupBoxRechBien = new System.Windows.Forms.GroupBox();
             this.comboBoxVilles = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAnnuler = new System.Windows.Forms.Button();
             this.buttonRechBien = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             // groupBoxRechBien
             // 
             this.groupBoxRechBien.Controls.Add(this.comboBoxVilles);
-            this.groupBoxRechBien.Controls.Add(this.button1);
+            this.groupBoxRechBien.Controls.Add(this.buttonAnnuler);
             this.groupBoxRechBien.Controls.Add(this.buttonRechBien);
             this.groupBoxRechBien.Controls.Add(this.label13);
             this.groupBoxRechBien.Controls.Add(this.label17);
@@ -85,15 +85,15 @@
             this.comboBoxVilles.Size = new System.Drawing.Size(271, 21);
             this.comboBoxVilles.TabIndex = 5;
             // 
-            // button1
+            // buttonAnnuler
             // 
-            this.button1.Location = new System.Drawing.Point(401, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Annuler";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAnnuler.Location = new System.Drawing.Point(401, 180);
+            this.buttonAnnuler.Name = "buttonAnnuler";
+            this.buttonAnnuler.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnnuler.TabIndex = 4;
+            this.buttonAnnuler.Text = "Annuler";
+            this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
             // buttonRechBien
             // 
@@ -242,7 +242,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxRechBien;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.Button buttonRechBien;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label17;

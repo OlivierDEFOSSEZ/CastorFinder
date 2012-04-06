@@ -63,21 +63,13 @@ namespace Pollux.DataBase
         // Retrouver une ville à partir de son index
         static public Ville trouverVille(int index)
         {
-            if (DBConnect())
-            {
-                string requete = "SELECT CODE_POSTAL_V, NOM_V, NUM_V FROM VILLES WHERE NUM_V = " + index;
-                OleDbCommand command = new OleDbCommand(requete, connect);
-                OleDbDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    int cp = reader.GetInt32(0);
-                    string nom = reader.GetString(1);
-                    Ville ville = new Ville(cp, nom);
-                    return ville;
-                }
-            }
-            connect.Close();
-            return null;
+            string requete = "SELECT CODE_POSTAL_V, NOM_V, NUM_V FROM VILLES WHERE NUM_V IS " + index;
+            OleDbCommand command = new OleDbCommand(requete, connect);
+            OleDbDataReader reader = command.ExecuteReader();
+            int cp = reader.GetInt32(0);
+            string nom = reader.GetString(1);
+            Ville ville = new Ville(cp, nom);
+            return ville;
         }
 
         // Vérification si la ville passée en paramètre est déjà dans la base

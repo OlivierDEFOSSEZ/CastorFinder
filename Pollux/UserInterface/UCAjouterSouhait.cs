@@ -39,6 +39,7 @@ namespace Pollux.UserInterface
             }
         }
         #endregion
+
         #region TrackBars
         private void trackBarAjoutSouhaitsBudget_Scroll(object sender, EventArgs e)
         {

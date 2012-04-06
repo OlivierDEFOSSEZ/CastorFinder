@@ -30,6 +30,8 @@ namespace Pollux.UserInterface
             }
         }
         #endregion
+
+        #region trackBar
         private void trackBarRechBienPrix_Scroll(object sender, EventArgs e)
         {
             textBoxRechBienPrix.Text = trackBarRechBienPrix.Value.ToString();
@@ -44,8 +46,10 @@ namespace Pollux.UserInterface
         {
             textBoxRechBienJardin.Text = trackBarRechBienJardin.Value.ToString();
         }
+        #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             this.Parent = null;
         }
