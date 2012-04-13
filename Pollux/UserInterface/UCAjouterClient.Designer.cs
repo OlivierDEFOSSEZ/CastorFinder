@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxAjoutClient = new System.Windows.Forms.GroupBox();
+            this.buttonAjoutVille = new System.Windows.Forms.Button();
             this.comboBoxVilles = new System.Windows.Forms.ComboBox();
             this.comboBoxAgents = new System.Windows.Forms.ComboBox();
             this.buttonAnnuler = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.buttonAjoutVille = new System.Windows.Forms.Button();
             this.groupBoxAjoutClient.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,16 @@
             this.groupBoxAjoutClient.TabStop = false;
             this.groupBoxAjoutClient.Text = "Ajouter un client";
             // 
+            // buttonAjoutVille
+            // 
+            this.buttonAjoutVille.Location = new System.Drawing.Point(284, 78);
+            this.buttonAjoutVille.Name = "buttonAjoutVille";
+            this.buttonAjoutVille.Size = new System.Drawing.Size(111, 23);
+            this.buttonAjoutVille.TabIndex = 24;
+            this.buttonAjoutVille.Text = "Ajouter une ville";
+            this.buttonAjoutVille.UseVisualStyleBackColor = true;
+            this.buttonAjoutVille.Click += new System.EventHandler(this.buttonAjoutVille_Click);
+            // 
             // comboBoxVilles
             // 
             this.comboBoxVilles.FormattingEnabled = true;
@@ -84,6 +94,7 @@
             // 
             // comboBoxAgents
             // 
+            this.comboBoxAgents.Enabled = false;
             this.comboBoxAgents.FormattingEnabled = true;
             this.comboBoxAgents.Location = new System.Drawing.Point(244, 181);
             this.comboBoxAgents.Name = "comboBoxAgents";
@@ -121,6 +132,7 @@
             this.radioButtonSouhait.TabStop = true;
             this.radioButtonSouhait.Text = "Ajouter un souhait";
             this.radioButtonSouhait.UseVisualStyleBackColor = true;
+            this.radioButtonSouhait.CheckedChanged += new System.EventHandler(this.radioButtonSouhait_CheckedChanged);
             // 
             // radioButtonBien
             // 
@@ -199,16 +211,6 @@
             this.label19.Size = new System.Drawing.Size(29, 13);
             this.label19.TabIndex = 0;
             this.label19.Text = "Nom";
-            // 
-            // buttonAjoutVille
-            // 
-            this.buttonAjoutVille.Location = new System.Drawing.Point(284, 78);
-            this.buttonAjoutVille.Name = "buttonAjoutVille";
-            this.buttonAjoutVille.Size = new System.Drawing.Size(111, 23);
-            this.buttonAjoutVille.TabIndex = 24;
-            this.buttonAjoutVille.Text = "Ajouter une ville";
-            this.buttonAjoutVille.UseVisualStyleBackColor = true;
-            this.buttonAjoutVille.Click += new System.EventHandler(this.buttonAjoutVille_Click);
             // 
             // UCAjouterClient
             // 

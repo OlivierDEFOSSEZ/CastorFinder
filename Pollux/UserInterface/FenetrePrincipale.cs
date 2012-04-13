@@ -15,6 +15,13 @@ namespace Pollux
     public partial class FenetrePrincipale : Form
     {
         private UserControl mdiChild;
+
+        public UserControl MdiChild
+        {
+            get { return mdiChild; }
+            set { mdiChild = value; }
+        }
+
         public OleDbConnection connect;
 
         public FenetrePrincipale()

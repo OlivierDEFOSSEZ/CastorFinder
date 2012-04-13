@@ -19,6 +19,7 @@ namespace Pollux.UserInterface
             InitializeComponent();
             loadAgents();
             loadVilles();
+            comboBoxAgents.SelectedIndex = 0;
         }
 
         #region Chargement des comboBox
@@ -51,27 +52,57 @@ namespace Pollux.UserInterface
         {
             if (textBoxNom.Text != "" && textBoxAdresse.Text != "" && textBoxTelephone.Text != "" && comboBoxVilles.SelectedItem != null)
             {
-                Client c = new Client(textBoxNom.Text, textBoxAdresse.Text, textBoxTelephone.Text, ((Agent)comboBoxAgents.SelectedItem).Index, ((Ville)comboBoxVilles.SelectedItem).Index);
+                Client c = new Client(textBoxNom.Text, textBoxAdresse.Text, textBoxTelephone.Text, ((Ville)comboBoxVilles.SelectedItem).Index);
                 if (radioButtonBien.Checked)
                 {
-                    MessageBox.Show("Attention", "erreur BIEN OK BdD");
-                    //UCAjouterBien(c)
-                    this.Hide();
+                    if (!SqlDataProvider.clientExiste(c))
+                    {
+                        MessageBox.Show("OK", "ajout client sans agent possible");
+                        /*
+                        UserControl ajouterBien = new UCAjouterBien(c);
+                        ajouterBien.Parent = this.Parent;
+                        ajouterBien.Dock = DockStyle.Fill;
+                        ajouterBien.Show();
+                        this.Hide();
+                         */
+                        //MainWindowName is the name of your main MDI parent form
+                        UserControl ajouterBien = new UCAjouterBien(c);
+                        ajouterBien.Parent = Application.OpenForms["FenetrePrincipale"];
+                        ajouterBien.Dock = DockStyle.Fill;
+                        ajouterBien.Show();
+                        this.Hide();
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("KO", "ajout client sans agent impossible");
+                    }
                 }
                 else
                 {
                     if (comboBoxAgents != null)
                     {
-                        if (SqlDataProvider.ajouterClient(c))
+                        c.Agent = SqlDataProvider.trouverAgent(((Agent)comboBoxAgents.SelectedItem).Index);
+                        if (!SqlDataProvider.clientExiste(c))
                         {
-                            MessageBox.Show("OK", "ajout client OK BdD");
+                            MessageBox.Show("OK", "ajout client avec agent possible");
+                            
+                            
+                            UserControl ajouterSouhait = new UCAjouterSouhait(c);
+                            //ajouterSouhait.Parent = this.Parent;
+                            //ajouterSouhait.Dock = DockStyle.Fill;
+                            FenetrePrincipale parent = (FenetrePrincipale)this.Parent;
+                            //Now you can access objects on the MDI Parent form from MDI Children
+                            parent.MdiChild = null;
+                            parent.MdiChild = ajouterSouhait;
+                            ajouterSouhait.Dock = DockStyle.Fill;
+                            ajouterSouhait.Show();
                         }
                         else
                         {
-                            MessageBox.Show("KO", "ajout client KO BdD");
+                            MessageBox.Show("KO", "ajout client avec agent impossible");
                         }
-                        //UCAjouterSouhait(c)
-                        this.Hide();
                     }
                 }
             }
@@ -83,6 +114,18 @@ namespace Pollux.UserInterface
             if (Ville.ShowDialog() == DialogResult.OK)
             {
                 loadVilles();
+            }
+        }
+
+        private void radioButtonSouhait_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonSouhait.Checked)
+            {
+                comboBoxAgents.Enabled = true;
+            }
+            else
+            {
+                comboBoxAgents.Enabled = false;
             }
         }
     }

@@ -32,6 +32,7 @@
             this.listBoxVilles = new System.Windows.Forms.ListBox();
             this.comboBoxAcheteur = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.buttonAddVilles = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.checkBoxJardin = new System.Windows.Forms.CheckBox();
             this.checkBoxSurfHab = new System.Windows.Forms.CheckBox();
             this.checkBoxBudgetMax = new System.Windows.Forms.CheckBox();
-            this.buttonAddVilles = new System.Windows.Forms.Button();
             this.groupBoxAjoutSouhaits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAjoutSouhaitJardin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAjoutSouhaitSurfHab)).BeginInit();
@@ -109,14 +109,26 @@
             this.label12.TabIndex = 8;
             this.label12.Text = "Acheteur :";
             // 
+            // buttonAddVilles
+            // 
+            this.buttonAddVilles.Location = new System.Drawing.Point(51, 204);
+            this.buttonAddVilles.Name = "buttonAddVilles";
+            this.buttonAddVilles.Size = new System.Drawing.Size(93, 23);
+            this.buttonAddVilles.TabIndex = 4;
+            this.buttonAddVilles.Text = "Ajouter une ville";
+            this.buttonAddVilles.UseVisualStyleBackColor = true;
+            this.buttonAddVilles.Click += new System.EventHandler(this.buttonAddVilles_Click);
+            // 
             // button2
             // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(375, 175);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "Annuler";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -244,16 +256,6 @@
             this.checkBoxBudgetMax.TabIndex = 0;
             this.checkBoxBudgetMax.Text = "Budget max :";
             this.checkBoxBudgetMax.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddVilles
-            // 
-            this.buttonAddVilles.Location = new System.Drawing.Point(51, 204);
-            this.buttonAddVilles.Name = "buttonAddVilles";
-            this.buttonAddVilles.Size = new System.Drawing.Size(93, 23);
-            this.buttonAddVilles.TabIndex = 4;
-            this.buttonAddVilles.Text = "Ajouter une ville";
-            this.buttonAddVilles.UseVisualStyleBackColor = true;
-            this.buttonAddVilles.Click += new System.EventHandler(this.buttonAddVilles_Click);
             // 
             // UCAjouterSouhait
             // 

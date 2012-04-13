@@ -51,6 +51,13 @@ namespace Pollux.Object
             m_agent = SqlDataProvider.trouverAgent(index_agent);
             m_ville = SqlDataProvider.trouverVille(index_ville);
         }
+        public Client(string nom, string adresse, string telephone, int index_ville)
+        {
+            m_nom = nom;
+            m_adresse = adresse;
+            m_telephone = telephone;
+            m_ville = SqlDataProvider.trouverVille(index_ville);
+        }
 
     }
 }

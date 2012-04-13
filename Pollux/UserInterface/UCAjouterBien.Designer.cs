@@ -78,7 +78,7 @@
             this.groupBoxAjoutBien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxAjoutBien.Location = new System.Drawing.Point(0, 30);
             this.groupBoxAjoutBien.Name = "groupBoxAjoutBien";
-            this.groupBoxAjoutBien.Size = new System.Drawing.Size(485, 216);
+            this.groupBoxAjoutBien.Size = new System.Drawing.Size(497, 225);
             this.groupBoxAjoutBien.TabIndex = 7;
             this.groupBoxAjoutBien.TabStop = false;
             this.groupBoxAjoutBien.Text = "Ajouter un bien";
@@ -156,12 +156,14 @@
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Location = new System.Drawing.Point(323, 187);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Annuler";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -257,7 +259,7 @@
             this.Controls.Add(this.groupBoxAjoutBien);
             this.Name = "UCAjouterBien";
             this.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.Size = new System.Drawing.Size(485, 246);
+            this.Size = new System.Drawing.Size(497, 255);
             this.groupBoxAjoutBien.ResumeLayout(false);
             this.groupBoxAjoutBien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAjoutBienJardin)).EndInit();

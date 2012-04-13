@@ -20,7 +20,14 @@ namespace Pollux.UserInterface
             loadClients();
             loadVilles();
         }
-
+        public UCAjouterSouhait(Client c)
+        {
+            InitializeComponent();
+            loadClients();
+            loadVilles();
+            comboBoxAcheteur.SelectedText = c.Nom;
+            comboBoxAcheteur.Enabled = false;
+        }
         #region Chargement des comboBox
         private void loadClients()
         {
@@ -66,6 +73,11 @@ namespace Pollux.UserInterface
             {
                 loadVilles();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
