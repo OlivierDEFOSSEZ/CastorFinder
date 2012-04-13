@@ -29,46 +29,48 @@
         private void InitializeComponent()
         {
             this.groupBoxRechSouhait = new System.Windows.Forms.GroupBox();
+            this.buttonAjoutVille = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.comboBoxVilles = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBoxRechSouhaitJardin = new System.Windows.Forms.TextBox();
-            this.textBoxRechSouhaitSurf = new System.Windows.Forms.TextBox();
-            this.textBoxRechSouhaitPrix = new System.Windows.Forms.TextBox();
-            this.trackBarRechSouhaitJardin = new System.Windows.Forms.TrackBar();
-            this.trackBarRechSouhaitSurf = new System.Windows.Forms.TrackBar();
-            this.trackBarRechSouhaitPrix = new System.Windows.Forms.TrackBar();
+            this.textBoxRechBienJardin = new System.Windows.Forms.TextBox();
             this.checkBoxVilles = new System.Windows.Forms.CheckBox();
+            this.textBoxRechBienSurf = new System.Windows.Forms.TextBox();
             this.checkBoxJardin = new System.Windows.Forms.CheckBox();
+            this.textBoxRechBienPrix = new System.Windows.Forms.TextBox();
+            this.trackBarRechBienJardin = new System.Windows.Forms.TrackBar();
             this.checkBoxSurfHab = new System.Windows.Forms.CheckBox();
+            this.trackBarRechBienSurf = new System.Windows.Forms.TrackBar();
             this.checkBoxBudgetMax = new System.Windows.Forms.CheckBox();
+            this.trackBarRechBienPrix = new System.Windows.Forms.TrackBar();
             this.groupBoxRechSouhait.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechSouhaitJardin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechSouhaitSurf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechSouhaitPrix)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechBienJardin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechBienSurf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechBienPrix)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxRechSouhait
             // 
+            this.groupBoxRechSouhait.Controls.Add(this.buttonAjoutVille);
+            this.groupBoxRechSouhait.Controls.Add(this.label13);
             this.groupBoxRechSouhait.Controls.Add(this.comboBoxVilles);
+            this.groupBoxRechSouhait.Controls.Add(this.label17);
             this.groupBoxRechSouhait.Controls.Add(this.button1);
+            this.groupBoxRechSouhait.Controls.Add(this.label18);
             this.groupBoxRechSouhait.Controls.Add(this.button3);
-            this.groupBoxRechSouhait.Controls.Add(this.label14);
-            this.groupBoxRechSouhait.Controls.Add(this.label15);
-            this.groupBoxRechSouhait.Controls.Add(this.label16);
-            this.groupBoxRechSouhait.Controls.Add(this.textBoxRechSouhaitJardin);
-            this.groupBoxRechSouhait.Controls.Add(this.textBoxRechSouhaitSurf);
-            this.groupBoxRechSouhait.Controls.Add(this.textBoxRechSouhaitPrix);
-            this.groupBoxRechSouhait.Controls.Add(this.trackBarRechSouhaitJardin);
-            this.groupBoxRechSouhait.Controls.Add(this.trackBarRechSouhaitSurf);
-            this.groupBoxRechSouhait.Controls.Add(this.trackBarRechSouhaitPrix);
+            this.groupBoxRechSouhait.Controls.Add(this.textBoxRechBienJardin);
             this.groupBoxRechSouhait.Controls.Add(this.checkBoxVilles);
+            this.groupBoxRechSouhait.Controls.Add(this.textBoxRechBienSurf);
             this.groupBoxRechSouhait.Controls.Add(this.checkBoxJardin);
+            this.groupBoxRechSouhait.Controls.Add(this.textBoxRechBienPrix);
+            this.groupBoxRechSouhait.Controls.Add(this.trackBarRechBienJardin);
             this.groupBoxRechSouhait.Controls.Add(this.checkBoxSurfHab);
+            this.groupBoxRechSouhait.Controls.Add(this.trackBarRechBienSurf);
             this.groupBoxRechSouhait.Controls.Add(this.checkBoxBudgetMax);
+            this.groupBoxRechSouhait.Controls.Add(this.trackBarRechBienPrix);
             this.groupBoxRechSouhait.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxRechSouhait.Location = new System.Drawing.Point(0, 30);
             this.groupBoxRechSouhait.Name = "groupBoxRechSouhait";
@@ -77,13 +79,41 @@
             this.groupBoxRechSouhait.TabStop = false;
             this.groupBoxRechSouhait.Text = "Rechercher un souhait";
             // 
+            // buttonAjoutVille
+            // 
+            this.buttonAjoutVille.Location = new System.Drawing.Point(315, 141);
+            this.buttonAjoutVille.Name = "buttonAjoutVille";
+            this.buttonAjoutVille.Size = new System.Drawing.Size(111, 23);
+            this.buttonAjoutVille.TabIndex = 22;
+            this.buttonAjoutVille.Text = "Ajouter une ville";
+            this.buttonAjoutVille.UseVisualStyleBackColor = true;
+            this.buttonAjoutVille.Click += new System.EventHandler(this.buttonAddVilles_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(432, 107);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(18, 13);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "m²";
+            // 
             // comboBoxVilles
             // 
             this.comboBoxVilles.FormattingEnabled = true;
             this.comboBoxVilles.Location = new System.Drawing.Point(155, 141);
             this.comboBoxVilles.Name = "comboBoxVilles";
-            this.comboBoxVilles.Size = new System.Drawing.Size(271, 21);
+            this.comboBoxVilles.Size = new System.Drawing.Size(153, 21);
             this.comboBoxVilles.TabIndex = 13;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(432, 71);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(18, 13);
+            this.label17.TabIndex = 20;
+            this.label17.Text = "m²";
             // 
             // button1
             // 
@@ -94,6 +124,15 @@
             this.button1.Text = "Annuler";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(432, 35);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(13, 13);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "€";
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(401, 209);
@@ -103,83 +142,12 @@
             this.button3.Text = "Rechercher";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // label14
+            // textBoxRechBienJardin
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(432, 110);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(18, 13);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "m²";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(432, 74);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(18, 13);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "m²";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(432, 38);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 13);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "€";
-            // 
-            // textBoxRechSouhaitJardin
-            // 
-            this.textBoxRechSouhaitJardin.Location = new System.Drawing.Point(314, 107);
-            this.textBoxRechSouhaitJardin.Name = "textBoxRechSouhaitJardin";
-            this.textBoxRechSouhaitJardin.Size = new System.Drawing.Size(112, 20);
-            this.textBoxRechSouhaitJardin.TabIndex = 2;
-            // 
-            // textBoxRechSouhaitSurf
-            // 
-            this.textBoxRechSouhaitSurf.Location = new System.Drawing.Point(314, 71);
-            this.textBoxRechSouhaitSurf.Name = "textBoxRechSouhaitSurf";
-            this.textBoxRechSouhaitSurf.Size = new System.Drawing.Size(112, 20);
-            this.textBoxRechSouhaitSurf.TabIndex = 2;
-            // 
-            // textBoxRechSouhaitPrix
-            // 
-            this.textBoxRechSouhaitPrix.Location = new System.Drawing.Point(314, 35);
-            this.textBoxRechSouhaitPrix.Name = "textBoxRechSouhaitPrix";
-            this.textBoxRechSouhaitPrix.Size = new System.Drawing.Size(112, 20);
-            this.textBoxRechSouhaitPrix.TabIndex = 2;
-            // 
-            // trackBarRechSouhaitJardin
-            // 
-            this.trackBarRechSouhaitJardin.Location = new System.Drawing.Point(155, 107);
-            this.trackBarRechSouhaitJardin.Maximum = 10000;
-            this.trackBarRechSouhaitJardin.Name = "trackBarRechSouhaitJardin";
-            this.trackBarRechSouhaitJardin.Size = new System.Drawing.Size(153, 45);
-            this.trackBarRechSouhaitJardin.TabIndex = 1;
-            this.trackBarRechSouhaitJardin.TickFrequency = 0;
-            this.trackBarRechSouhaitJardin.Scroll += new System.EventHandler(this.trackBarRechSouhaitJardin_Scroll);
-            // 
-            // trackBarRechSouhaitSurf
-            // 
-            this.trackBarRechSouhaitSurf.Location = new System.Drawing.Point(155, 69);
-            this.trackBarRechSouhaitSurf.Maximum = 300;
-            this.trackBarRechSouhaitSurf.Name = "trackBarRechSouhaitSurf";
-            this.trackBarRechSouhaitSurf.Size = new System.Drawing.Size(153, 45);
-            this.trackBarRechSouhaitSurf.TabIndex = 1;
-            this.trackBarRechSouhaitSurf.TickFrequency = 0;
-            this.trackBarRechSouhaitSurf.Scroll += new System.EventHandler(this.trackBarRechSouhaitSurf_Scroll);
-            // 
-            // trackBarRechSouhaitPrix
-            // 
-            this.trackBarRechSouhaitPrix.Location = new System.Drawing.Point(155, 35);
-            this.trackBarRechSouhaitPrix.Maximum = 1000000;
-            this.trackBarRechSouhaitPrix.Name = "trackBarRechSouhaitPrix";
-            this.trackBarRechSouhaitPrix.Size = new System.Drawing.Size(153, 45);
-            this.trackBarRechSouhaitPrix.TabIndex = 1;
-            this.trackBarRechSouhaitPrix.TickFrequency = 0;
-            this.trackBarRechSouhaitPrix.Scroll += new System.EventHandler(this.trackBarRechSouhaitPrix_Scroll);
+            this.textBoxRechBienJardin.Location = new System.Drawing.Point(314, 104);
+            this.textBoxRechBienJardin.Name = "textBoxRechBienJardin";
+            this.textBoxRechBienJardin.Size = new System.Drawing.Size(112, 20);
+            this.textBoxRechBienJardin.TabIndex = 18;
             // 
             // checkBoxVilles
             // 
@@ -191,6 +159,13 @@
             this.checkBoxVilles.Text = "Villes :";
             this.checkBoxVilles.UseVisualStyleBackColor = true;
             // 
+            // textBoxRechBienSurf
+            // 
+            this.textBoxRechBienSurf.Location = new System.Drawing.Point(314, 68);
+            this.textBoxRechBienSurf.Name = "textBoxRechBienSurf";
+            this.textBoxRechBienSurf.Size = new System.Drawing.Size(112, 20);
+            this.textBoxRechBienSurf.TabIndex = 17;
+            // 
             // checkBoxJardin
             // 
             this.checkBoxJardin.AutoSize = true;
@@ -200,6 +175,23 @@
             this.checkBoxJardin.TabIndex = 0;
             this.checkBoxJardin.Text = "Surface de jardin min :";
             this.checkBoxJardin.UseVisualStyleBackColor = true;
+            // 
+            // textBoxRechBienPrix
+            // 
+            this.textBoxRechBienPrix.Location = new System.Drawing.Point(314, 32);
+            this.textBoxRechBienPrix.Name = "textBoxRechBienPrix";
+            this.textBoxRechBienPrix.Size = new System.Drawing.Size(112, 20);
+            this.textBoxRechBienPrix.TabIndex = 16;
+            // 
+            // trackBarRechBienJardin
+            // 
+            this.trackBarRechBienJardin.Location = new System.Drawing.Point(155, 104);
+            this.trackBarRechBienJardin.Maximum = 10000;
+            this.trackBarRechBienJardin.Name = "trackBarRechBienJardin";
+            this.trackBarRechBienJardin.Size = new System.Drawing.Size(153, 45);
+            this.trackBarRechBienJardin.TabIndex = 13;
+            this.trackBarRechBienJardin.TickFrequency = 0;
+            this.trackBarRechBienJardin.Scroll += new System.EventHandler(this.trackBarRechBienJardin_Scroll);
             // 
             // checkBoxSurfHab
             // 
@@ -211,6 +203,16 @@
             this.checkBoxSurfHab.Text = "Surface habitable min :";
             this.checkBoxSurfHab.UseVisualStyleBackColor = true;
             // 
+            // trackBarRechBienSurf
+            // 
+            this.trackBarRechBienSurf.Location = new System.Drawing.Point(155, 66);
+            this.trackBarRechBienSurf.Maximum = 300;
+            this.trackBarRechBienSurf.Name = "trackBarRechBienSurf";
+            this.trackBarRechBienSurf.Size = new System.Drawing.Size(153, 45);
+            this.trackBarRechBienSurf.TabIndex = 14;
+            this.trackBarRechBienSurf.TickFrequency = 0;
+            this.trackBarRechBienSurf.Scroll += new System.EventHandler(this.trackBarRechBienSurf_Scroll);
+            // 
             // checkBoxBudgetMax
             // 
             this.checkBoxBudgetMax.AutoSize = true;
@@ -220,6 +222,16 @@
             this.checkBoxBudgetMax.TabIndex = 0;
             this.checkBoxBudgetMax.Text = "Budget max :";
             this.checkBoxBudgetMax.UseVisualStyleBackColor = true;
+            // 
+            // trackBarRechBienPrix
+            // 
+            this.trackBarRechBienPrix.Location = new System.Drawing.Point(155, 32);
+            this.trackBarRechBienPrix.Maximum = 1000000;
+            this.trackBarRechBienPrix.Name = "trackBarRechBienPrix";
+            this.trackBarRechBienPrix.Size = new System.Drawing.Size(153, 45);
+            this.trackBarRechBienPrix.TabIndex = 15;
+            this.trackBarRechBienPrix.TickFrequency = 0;
+            this.trackBarRechBienPrix.Scroll += new System.EventHandler(this.trackBarRechBienPrix_Scroll);
             // 
             // UCRechercherSouhait
             // 
@@ -231,9 +243,9 @@
             this.Size = new System.Drawing.Size(488, 271);
             this.groupBoxRechSouhait.ResumeLayout(false);
             this.groupBoxRechSouhait.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechSouhaitJardin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechSouhaitSurf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechSouhaitPrix)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechBienJardin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechBienSurf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRechBienPrix)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,19 +255,20 @@
         private System.Windows.Forms.GroupBox groupBoxRechSouhait;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBoxRechSouhaitJardin;
-        private System.Windows.Forms.TextBox textBoxRechSouhaitSurf;
-        private System.Windows.Forms.TextBox textBoxRechSouhaitPrix;
-        private System.Windows.Forms.TrackBar trackBarRechSouhaitJardin;
-        private System.Windows.Forms.TrackBar trackBarRechSouhaitSurf;
-        private System.Windows.Forms.TrackBar trackBarRechSouhaitPrix;
         private System.Windows.Forms.CheckBox checkBoxVilles;
         private System.Windows.Forms.CheckBox checkBoxJardin;
         private System.Windows.Forms.CheckBox checkBoxSurfHab;
         private System.Windows.Forms.CheckBox checkBoxBudgetMax;
         private System.Windows.Forms.ComboBox comboBoxVilles;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBoxRechBienJardin;
+        private System.Windows.Forms.TextBox textBoxRechBienSurf;
+        private System.Windows.Forms.TextBox textBoxRechBienPrix;
+        private System.Windows.Forms.TrackBar trackBarRechBienJardin;
+        private System.Windows.Forms.TrackBar trackBarRechBienSurf;
+        private System.Windows.Forms.TrackBar trackBarRechBienPrix;
+        private System.Windows.Forms.Button buttonAjoutVille;
     }
 }

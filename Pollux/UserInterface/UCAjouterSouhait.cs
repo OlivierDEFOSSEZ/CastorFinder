@@ -24,6 +24,7 @@ namespace Pollux.UserInterface
         #region Chargement des comboBox
         private void loadClients()
         {
+            comboBoxAcheteur.Items.Clear();
             List<string> listeClients = SqlDataProvider.GetListeNomClients();
             foreach (string prenom in listeClients)
             {
@@ -32,6 +33,7 @@ namespace Pollux.UserInterface
         }
         private void loadVilles()
         {
+            listBoxVilles.Items.Clear();
             List<Ville> listeVilles = SqlDataProvider.GetListeVilles();
             foreach (Ville ville in listeVilles)
             {

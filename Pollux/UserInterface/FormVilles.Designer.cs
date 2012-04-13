@@ -60,7 +60,7 @@
             this.boutonAnnuler.Location = new System.Drawing.Point(147, 89);
             this.boutonAnnuler.Name = "boutonAnnuler";
             this.boutonAnnuler.Size = new System.Drawing.Size(75, 23);
-            this.boutonAnnuler.TabIndex = 4;
+            this.boutonAnnuler.TabIndex = 3;
             this.boutonAnnuler.Text = "Annuler";
             this.boutonAnnuler.UseVisualStyleBackColor = true;
             // 
@@ -79,7 +79,7 @@
             this.textBoxNom.Location = new System.Drawing.Point(100, 52);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(203, 20);
-            this.textBoxNom.TabIndex = 3;
+            this.textBoxNom.TabIndex = 2;
             // 
             // label4
             // 
@@ -95,7 +95,7 @@
             this.textBoxCP.Location = new System.Drawing.Point(100, 26);
             this.textBoxCP.Name = "textBoxCP";
             this.textBoxCP.Size = new System.Drawing.Size(203, 20);
-            this.textBoxCP.TabIndex = 3;
+            this.textBoxCP.TabIndex = 1;
             // 
             // label3
             // 

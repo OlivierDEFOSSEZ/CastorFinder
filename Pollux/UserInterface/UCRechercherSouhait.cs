@@ -23,6 +23,7 @@ namespace Pollux.UserInterface
         #region Chargement des comboBox
         private void loadVilles()
         {
+            comboBoxVilles.Items.Clear();
             List<Ville> listeVilles = SqlDataProvider.GetListeVilles();
             foreach (Ville ville in listeVilles)
             {
@@ -32,20 +33,29 @@ namespace Pollux.UserInterface
         #endregion
 
         #region trackBar
-        private void trackBarRechSouhaitPrix_Scroll(object sender, EventArgs e)
+        private void trackBarRechBienPrix_Scroll(object sender, EventArgs e)
         {
-            textBoxRechSouhaitPrix.Text = trackBarRechSouhaitPrix.Value.ToString();
+            textBoxRechBienPrix.Text = trackBarRechBienPrix.Value.ToString();
         }
 
-        private void trackBarRechSouhaitSurf_Scroll(object sender, EventArgs e)
+        private void trackBarRechBienSurf_Scroll(object sender, EventArgs e)
         {
-            textBoxRechSouhaitSurf.Text = trackBarRechSouhaitSurf.Value.ToString();
+            textBoxRechBienSurf.Text = trackBarRechBienSurf.Value.ToString();
         }
 
-        private void trackBarRechSouhaitJardin_Scroll(object sender, EventArgs e)
+        private void trackBarRechBienJardin_Scroll(object sender, EventArgs e)
         {
-            textBoxRechSouhaitJardin.Text = trackBarRechSouhaitJardin.Value.ToString();
+            textBoxRechBienJardin.Text = trackBarRechBienJardin.Value.ToString();
         }
         #endregion
+
+        private void buttonAddVilles_Click(object sender, EventArgs e)
+        {
+            Form Ville = new FormVilles();
+            if (Ville.ShowDialog() == DialogResult.OK)
+            {
+                loadVilles();
+            }
+        }
     }
 }

@@ -23,6 +23,7 @@ namespace Pollux.UserInterface
         #region Chargement des comboBox
         private void loadVilles()
         {
+            comboBoxVilles.Items.Clear();
             List<Ville> listeVilles = SqlDataProvider.GetListeVilles();
             foreach (Ville ville in listeVilles)
             {
@@ -52,6 +53,15 @@ namespace Pollux.UserInterface
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             this.Parent = null;
+        }
+
+        private void buttonAjoutVille_Click(object sender, EventArgs e)
+        {
+            Form Ville = new FormVilles();
+            if (Ville.ShowDialog() == DialogResult.OK)
+            {
+                loadVilles();
+            }
         }
     }
 }

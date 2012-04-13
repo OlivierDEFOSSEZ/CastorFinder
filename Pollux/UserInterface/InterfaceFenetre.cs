@@ -10,7 +10,5 @@ namespace Pollux.UserInterface
     interface InterfaceFenetre
     {
 
-        
-
     }
 }

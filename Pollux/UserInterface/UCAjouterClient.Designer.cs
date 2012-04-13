@@ -43,11 +43,13 @@
             this.label20 = new System.Windows.Forms.Label();
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.buttonAjoutVille = new System.Windows.Forms.Button();
             this.groupBoxAjoutClient.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxAjoutClient
             // 
+            this.groupBoxAjoutClient.Controls.Add(this.buttonAjoutVille);
             this.groupBoxAjoutClient.Controls.Add(this.comboBoxVilles);
             this.groupBoxAjoutClient.Controls.Add(this.comboBoxAgents);
             this.groupBoxAjoutClient.Controls.Add(this.buttonAnnuler);
@@ -77,7 +79,7 @@
             "Ajouter une ville..."});
             this.comboBoxVilles.Location = new System.Drawing.Point(107, 79);
             this.comboBoxVilles.Name = "comboBoxVilles";
-            this.comboBoxVilles.Size = new System.Drawing.Size(288, 21);
+            this.comboBoxVilles.Size = new System.Drawing.Size(171, 21);
             this.comboBoxVilles.TabIndex = 3;
             // 
             // comboBoxAgents
@@ -198,6 +200,16 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Nom";
             // 
+            // buttonAjoutVille
+            // 
+            this.buttonAjoutVille.Location = new System.Drawing.Point(284, 78);
+            this.buttonAjoutVille.Name = "buttonAjoutVille";
+            this.buttonAjoutVille.Size = new System.Drawing.Size(111, 23);
+            this.buttonAjoutVille.TabIndex = 24;
+            this.buttonAjoutVille.Text = "Ajouter une ville";
+            this.buttonAjoutVille.UseVisualStyleBackColor = true;
+            this.buttonAjoutVille.Click += new System.EventHandler(this.buttonAjoutVille_Click);
+            // 
             // UCAjouterClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,5 +241,6 @@
         private System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox comboBoxVilles;
+        private System.Windows.Forms.Button buttonAjoutVille;
     }
 }

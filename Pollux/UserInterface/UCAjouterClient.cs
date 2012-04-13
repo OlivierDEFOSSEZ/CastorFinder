@@ -24,6 +24,7 @@ namespace Pollux.UserInterface
         #region Chargement des comboBox
         private void loadAgents()
         {
+            comboBoxAgents.Items.Clear();
             List<Agent> listeAgents = SqlDataProvider.GetListeAgents();
             foreach (Agent agent in listeAgents)
             {
@@ -32,6 +33,7 @@ namespace Pollux.UserInterface
         }
         private void loadVilles()
         {
+            comboBoxVilles.Items.Clear();
             List<Ville> listeVilles = SqlDataProvider.GetListeVilles();
             foreach (Ville ville in listeVilles)
             {
@@ -54,18 +56,33 @@ namespace Pollux.UserInterface
                 {
                     MessageBox.Show("Attention", "erreur BIEN OK BdD");
                     //UCAjouterBien(c)
+                    this.Hide();
                 }
                 else
                 {
                     if (comboBoxAgents != null)
                     {
                         if (SqlDataProvider.ajouterClient(c))
+                        {
                             MessageBox.Show("OK", "ajout client OK BdD");
-                        //UCAjouterSouhait(c)
+                        }
                         else
+                        {
                             MessageBox.Show("KO", "ajout client KO BdD");
+                        }
+                        //UCAjouterSouhait(c)
+                        this.Hide();
                     }
                 }
+            }
+        }
+
+        private void buttonAjoutVille_Click(object sender, EventArgs e)
+        {
+            Form Ville = new FormVilles();
+            if (Ville.ShowDialog() == DialogResult.OK)
+            {
+                loadVilles();
             }
         }
     }

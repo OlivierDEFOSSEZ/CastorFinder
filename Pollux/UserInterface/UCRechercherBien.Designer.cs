@@ -45,6 +45,7 @@
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.buttonAjoutVille = new System.Windows.Forms.Button();
             this.groupBoxRechBien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRechBienJardin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRechBienSurf)).BeginInit();
@@ -53,6 +54,7 @@
             // 
             // groupBoxRechBien
             // 
+            this.groupBoxRechBien.Controls.Add(this.buttonAjoutVille);
             this.groupBoxRechBien.Controls.Add(this.comboBoxVilles);
             this.groupBoxRechBien.Controls.Add(this.buttonAnnuler);
             this.groupBoxRechBien.Controls.Add(this.buttonRechBien);
@@ -82,7 +84,7 @@
             this.comboBoxVilles.FormattingEnabled = true;
             this.comboBoxVilles.Location = new System.Drawing.Point(155, 141);
             this.comboBoxVilles.Name = "comboBoxVilles";
-            this.comboBoxVilles.Size = new System.Drawing.Size(271, 21);
+            this.comboBoxVilles.Size = new System.Drawing.Size(153, 21);
             this.comboBoxVilles.TabIndex = 5;
             // 
             // buttonAnnuler
@@ -222,6 +224,16 @@
             this.checkBox12.Text = "Budget max :";
             this.checkBox12.UseVisualStyleBackColor = true;
             // 
+            // buttonAjoutVille
+            // 
+            this.buttonAjoutVille.Location = new System.Drawing.Point(314, 139);
+            this.buttonAjoutVille.Name = "buttonAjoutVille";
+            this.buttonAjoutVille.Size = new System.Drawing.Size(112, 23);
+            this.buttonAjoutVille.TabIndex = 23;
+            this.buttonAjoutVille.Text = "Ajouter une ville";
+            this.buttonAjoutVille.UseVisualStyleBackColor = true;
+            this.buttonAjoutVille.Click += new System.EventHandler(this.buttonAjoutVille_Click);
+            // 
             // UCRechercherBien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,5 +270,6 @@
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.ComboBox comboBoxVilles;
+        private System.Windows.Forms.Button buttonAjoutVille;
     }
 }

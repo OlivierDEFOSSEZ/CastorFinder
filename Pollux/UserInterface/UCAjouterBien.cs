@@ -24,6 +24,7 @@ namespace Pollux.UserInterface
         #region Chargement des comboBox
         private void loadClients()
         {
+            comboBoxProprietaire.Items.Clear();
             List<string> listeNomClients = SqlDataProvider.GetListeNomClients();
             foreach (string nom in listeNomClients) 
             {
@@ -32,6 +33,7 @@ namespace Pollux.UserInterface
         }
         private void loadVilles()
         {
+            comboBoxVille.Items.Clear();
             List<Ville> listeVilles = SqlDataProvider.GetListeVilles();
             foreach (Ville ville in listeVilles)
             {
@@ -56,5 +58,14 @@ namespace Pollux.UserInterface
             textBoxAjoutBienJardin.Text = trackBarAjoutBienJardin.Value.ToString();
         } 
         #endregion
+
+        private void buttonAjoutVille_Click(object sender, EventArgs e)
+        {
+            Form Ville = new FormVilles();
+            if (Ville.ShowDialog() == DialogResult.OK)
+            {
+                loadVilles();
+            }
+        }
     }
 }

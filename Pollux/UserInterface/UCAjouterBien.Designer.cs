@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxAjoutBien = new System.Windows.Forms.GroupBox();
+            this.buttonAjoutVille = new System.Windows.Forms.Button();
             this.comboBoxVille = new System.Windows.Forms.ComboBox();
             this.comboBoxProprietaire = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             // 
             // groupBoxAjoutBien
             // 
+            this.groupBoxAjoutBien.Controls.Add(this.buttonAjoutVille);
             this.groupBoxAjoutBien.Controls.Add(this.comboBoxVille);
             this.groupBoxAjoutBien.Controls.Add(this.comboBoxProprietaire);
             this.groupBoxAjoutBien.Controls.Add(this.label10);
@@ -81,12 +83,22 @@
             this.groupBoxAjoutBien.TabStop = false;
             this.groupBoxAjoutBien.Text = "Ajouter un bien";
             // 
+            // buttonAjoutVille
+            // 
+            this.buttonAjoutVille.Location = new System.Drawing.Point(264, 154);
+            this.buttonAjoutVille.Name = "buttonAjoutVille";
+            this.buttonAjoutVille.Size = new System.Drawing.Size(111, 23);
+            this.buttonAjoutVille.TabIndex = 23;
+            this.buttonAjoutVille.Text = "Ajouter une ville";
+            this.buttonAjoutVille.UseVisualStyleBackColor = true;
+            this.buttonAjoutVille.Click += new System.EventHandler(this.buttonAjoutVille_Click);
+            // 
             // comboBoxVille
             // 
             this.comboBoxVille.FormattingEnabled = true;
             this.comboBoxVille.Location = new System.Drawing.Point(104, 156);
             this.comboBoxVille.Name = "comboBoxVille";
-            this.comboBoxVille.Size = new System.Drawing.Size(271, 21);
+            this.comboBoxVille.Size = new System.Drawing.Size(153, 21);
             this.comboBoxVille.TabIndex = 8;
             // 
             // comboBoxProprietaire
@@ -144,7 +156,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(404, 159);
+            this.button1.Location = new System.Drawing.Point(323, 187);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -276,5 +288,6 @@
         private System.Windows.Forms.TrackBar trackBarAjoutBienPrix;
         private System.Windows.Forms.ComboBox comboBoxProprietaire;
         private System.Windows.Forms.ComboBox comboBoxVille;
+        private System.Windows.Forms.Button buttonAjoutVille;
     }
 }
