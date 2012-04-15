@@ -59,5 +59,12 @@ namespace Pollux.Object
             m_ville = SqlDataProvider.trouverVille(index_ville);
         }
 
+        public bool Toto(Agent a)
+        {
+            if (a == m_agent)
+                return true;
+            else return false;
+        }
+
     }
 }
