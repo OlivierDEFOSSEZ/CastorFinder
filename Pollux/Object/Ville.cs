@@ -7,11 +7,10 @@ using Pollux.DataBase;
 namespace Pollux.Object
 {
     public class Ville
-    { 
+    {  
+        private int m_index;
         private int m_codePostal;
         private string m_nom;
-        private int m_index;
-
 
         #region Propriétés
         public int Index
@@ -37,6 +36,7 @@ namespace Pollux.Object
             m_nom = nom;
             m_index = index;
         }
+
         public Ville(int codePostal, string nom)
         {
             m_codePostal = codePostal;
@@ -44,7 +44,6 @@ namespace Pollux.Object
             m_index = SqlDataProvider.trouverVille(codePostal, nom);
         }
        
-
         public override string ToString()
         {
             return m_nom + " (" + m_codePostal + ")";

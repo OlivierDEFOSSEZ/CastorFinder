@@ -11,13 +11,27 @@ namespace Pollux.DataBase
 {
     static public partial class SqlDataProvider  
     {
-
+        // Ajout du bien fournit en paramètre dans la base
         static public bool AjouterBien(Bien bien)
         {
             bool ajout = false;
-            // TODO ajouter le bien fournit en paramètre dans la base
-
-
+            // si pas de connexion
+            if (!DBConnect())
+                 ajout = false;
+            // si connexion
+            else
+            {
+                string requete = string.Format("INSERT INTO BIENS (PRIX_VENTE_B, DATE_MISE_EN_VENTE_B, SURFACE_HAB_B, SURFACE_JARDIN_B, NUM_V, NUM_C) VALUES (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}',N'{5}')", 
+                    bien.Prix, bien.DateMiseEnVente, bien.SurfaceHabitable, bien.SurfaceJardin, bien.Ville.Index, bien.Client.Index);
+                OleDbCommand command = new OleDbCommand(requete, connect);
+                int rowCount = command.ExecuteNonQuery();  
+                if (rowCount == 1)
+                    ajout = true;  // ajout effectué
+                else
+                    ajout = false; // ajout non effectué
+                // déconnexion
+                connect.Close();
+            }
             return ajout;
         }
 

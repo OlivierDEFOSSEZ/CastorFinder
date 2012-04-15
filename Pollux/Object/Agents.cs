@@ -2,9 +2,9 @@
 {
     public class Agent
     {
-        private string m_prenom;
         private int m_index;
-
+        private string m_prenom;
+        
         #region Propriétés
         public int Index
         {
@@ -17,11 +17,13 @@
             set { m_prenom = value; }
         }
         #endregion
+
         public Agent(int index, string prenom)
         {
             m_index = index;
             m_prenom = prenom;
         }
+
         public override string ToString()
         {
             return m_prenom;

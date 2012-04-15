@@ -26,18 +26,24 @@ namespace Pollux.UserInterface
             InitializeComponent();
             loadClients();
             loadVilles();
-            comboBoxProprietaire.SelectedText = c.Nom;
+            comboBoxProprietaire.SelectedItem = c;  // PB pour afficher le proprio
             comboBoxProprietaire.Enabled = false;
         }
         #region Chargement des comboBox
         private void loadClients()
         {
             comboBoxProprietaire.Items.Clear();
-            List<string> listeNomClients = SqlDataProvider.GetListeNomClients();
+            List<Client> listeClient = SqlDataProvider.GetListeClients();
+            foreach (Client proprietaire in listeClient)
+            {
+                comboBoxProprietaire.Items.Add(proprietaire);
+            }
+           /* List<string> listeNomClients = SqlDataProvider.GetListeNomClients();
             foreach (string nom in listeNomClients) 
             {
                 comboBoxProprietaire.Items.Add(nom);
             }
+            */
         }
         private void loadVilles()
         {
@@ -45,7 +51,7 @@ namespace Pollux.UserInterface
             List<Ville> listeVilles = SqlDataProvider.GetListeVilles();
             foreach (Ville ville in listeVilles)
             {
-                comboBoxVille.Items.Add(string.Format("{0} ({1})", ville.Nom, ville.CodePostal));
+                comboBoxVille.Items.Add(ville);
             }
         }
         #endregion
@@ -76,9 +82,32 @@ namespace Pollux.UserInterface
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
+
+
+        // A FINIR
+        private void buttonAjouter_Click(object sender, EventArgs e)
+        {
+            // Récupération des infos
+            int prix = int.Parse(textBoxAjoutBienPrix.Text);
+            // TODO un controle pour la date de mise en vente
+            int surfHab = int.Parse(textBoxAjoutBienSurfHab.Text);
+            int surfJard = int.Parse(textBoxAjoutBienJardin.Text);
+            // PB ne détecte pas le proprio avec selectedItem
+            Client proprietaire = (Client)comboBoxProprietaire.SelectedItem;
+            Ville ville = (Ville)comboBoxVille.SelectedItem;
+            Bien bien = new Bien(prix, new DateTime(2000,5,12), surfHab, surfJard, ville, proprietaire);
+            // Ajout en base
+            if (SqlDataProvider.AjouterBien(bien))
+                MessageBox.Show("Ajout du bien effectué", "Opération réussit");
+            else
+                MessageBox.Show("Ajout du bien non effectué", "Echec");
+            this.Hide();
+        }
+
+
     }
 }

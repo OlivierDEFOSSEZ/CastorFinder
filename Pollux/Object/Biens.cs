@@ -12,6 +12,7 @@ namespace Pollux.Object
         private int m_surfaceHabitable;
         private int m_surfaceJardin;
         private Ville m_ville;
+        private Client m_client;
 
         #region Propriétés
         public int Prix
@@ -39,15 +40,21 @@ namespace Pollux.Object
             get { return m_ville; }
             set { m_ville = value; }
         }
+        public Client Client
+        {
+            get { return m_client; }
+            set { m_client = value; }
+        }
         #endregion
 
-        public Bien(int prix, DateTime dateMiseEnVente, int surfaceHabitable, int surfaceJardin, Ville ville)
+        public Bien(int prix, DateTime dateMiseEnVente, int surfaceHabitable, int surfaceJardin, Ville ville, Client client)
         {
             m_prix = prix;
             m_dateMiseEnVente = dateMiseEnVente;
             m_surfaceHabitable = surfaceHabitable;
             m_surfaceJardin = surfaceJardin;
             m_ville = ville;
+            m_client = client;
         }
     }
 }
