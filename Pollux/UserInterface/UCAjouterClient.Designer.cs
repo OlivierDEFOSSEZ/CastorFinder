@@ -91,6 +91,7 @@
             this.comboBoxVilles.Name = "comboBoxVilles";
             this.comboBoxVilles.Size = new System.Drawing.Size(171, 21);
             this.comboBoxVilles.TabIndex = 3;
+            this.comboBoxVilles.SelectedIndexChanged += new System.EventHandler(this.comboBoxVilles_SelectedIndexChanged);
             // 
             // comboBoxAgents
             // 
@@ -114,6 +115,7 @@
             // 
             // buttonCreer
             // 
+            this.buttonCreer.Enabled = false;
             this.buttonCreer.Location = new System.Drawing.Point(401, 209);
             this.buttonCreer.Name = "buttonCreer";
             this.buttonCreer.Size = new System.Drawing.Size(75, 23);
@@ -152,6 +154,7 @@
             this.textBoxTelephone.Name = "textBoxTelephone";
             this.textBoxTelephone.Size = new System.Drawing.Size(288, 20);
             this.textBoxTelephone.TabIndex = 4;
+            this.textBoxTelephone.TextChanged += new System.EventHandler(this.textBoxTelephone_TextChanged);
             // 
             // label23
             // 
@@ -186,6 +189,7 @@
             this.textBoxAdresse.Name = "textBoxAdresse";
             this.textBoxAdresse.Size = new System.Drawing.Size(288, 20);
             this.textBoxAdresse.TabIndex = 2;
+            this.textBoxAdresse.TextChanged += new System.EventHandler(this.textBoxAdresse_TextChanged);
             // 
             // label20
             // 
@@ -202,6 +206,7 @@
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(288, 20);
             this.textBoxNom.TabIndex = 1;
+            this.textBoxNom.TextChanged += new System.EventHandler(this.textBoxNom_TextChanged);
             // 
             // label19
             // 

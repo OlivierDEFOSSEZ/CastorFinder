@@ -32,7 +32,7 @@ namespace Pollux.DataBase
             return listeAgents;
         }
 
-        // Retrouver une ville à partir de son index
+        // Retrouver un agent à partir de son index
         static public Agent trouverAgent(int index)
         {
             if (DBConnect())
@@ -56,10 +56,12 @@ namespace Pollux.DataBase
         {
             Agent agent = null;
             // TODO rechercher l'agent du client fournit en paramètre
-
+            // hmm en fait pas besoin si l'agent fait parti du client ...
 
 
             return agent;
         }
+
+        
     }
 }

@@ -16,7 +16,7 @@ namespace Pollux.DataBase
         {
             try
             {
-                connect = new OleDbConnection(@"Provider=SQLOLEDB;Data Source=localhost;Integrated Security=SSPI;Initial Catalog=CASTORFINDER");
+                connect = new OleDbConnection(@"Provider=SQLOLEDB;Data Source=INFO-ORTIE\SQLEXPRESS2008;Integrated Security=SSPI;Initial Catalog=CASTORFINDER");
                 connect.Open();
                 return (connect.State == ConnectionState.Open);
             }

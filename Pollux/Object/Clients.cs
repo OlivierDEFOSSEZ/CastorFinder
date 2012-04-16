@@ -8,6 +8,7 @@ namespace Pollux.Object
 {
     public class Client
     {
+        private int m_index;
         private string m_nom;
         private string m_adresse;
         private string m_telephone;
@@ -15,16 +16,10 @@ namespace Pollux.Object
         private Ville m_ville;
 
         #region Propriétés
-        public Agent Agent
+        public int Index
         {
-            get { return m_agent; }
-            set { m_agent = value; }
-        }
-
-        public Ville Ville
-        {
-            get { return m_ville; }
-            set { m_ville = value; }
+            get { return m_index; }
+            set { m_index = value; }
         }
         public string Nom
         {
@@ -40,23 +35,57 @@ namespace Pollux.Object
         {
             get { return m_telephone; }
             set { m_telephone = value; }
+        }        
+        public Agent Agent
+        {
+            get { return m_agent; }
+            set { m_agent = value; }
+        }
+        public Ville Ville
+        {
+            get { return m_ville; }
+            set { m_ville = value; }
         }
         #endregion
 
-        public Client(string nom, string adresse, string telephone, int index_agent, int index_ville)
+        public Client(int index, string nom, string adresse, string telephone, int index_agent, int index_ville)
         {
+            m_index = index;
             m_nom = nom;
             m_adresse = adresse;
             m_telephone = telephone;
             m_agent = SqlDataProvider.trouverAgent(index_agent);
             m_ville = SqlDataProvider.trouverVille(index_ville);
         }
-        public Client(string nom, string adresse, string telephone, int index_ville)
+        public Client(int index, string nom, string adresse, string telephone, int index_ville)
         {
+            m_index = index;
             m_nom = nom;
             m_adresse = adresse;
             m_telephone = telephone;
             m_ville = SqlDataProvider.trouverVille(index_ville);
+        }
+
+        public Client(int index, string nom, string adresse, string telephone, Agent agent, Ville ville)
+        {
+            m_index = index;
+            m_nom = nom;
+            m_adresse = adresse;
+            m_telephone = telephone;
+            m_agent = agent;
+            m_ville = ville;
+        }
+
+        public override string ToString()
+        {
+            return m_nom ;
+        }
+
+        public bool Toto(Agent a)
+        {
+            if (a == m_agent)
+                return true;
+            else return false;
         }
 
     }
