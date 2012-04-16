@@ -120,7 +120,6 @@ namespace Pollux.UserInterface
         // A FINIR
         private void buttonCreer_Click(object sender, EventArgs e)
         {
-            bool ajoutBien;
             if (textBoxNom.Text != "" && textBoxAdresse.Text != "" && textBoxTelephone.Text != "" && comboBoxVilles.SelectedItem != null)
             {
                 Client client = SqlDataProvider.ClientExiste(textBoxNom.Text, (Ville)comboBoxVilles.SelectedItem);
@@ -136,7 +135,6 @@ namespace Pollux.UserInterface
 
                 if (radioButtonBien.Checked)
                 {
-                    ajoutBien = true;  // ça sera un bien
                     /*
                   UserControl ajouterBien = new UCAjouterBien(c);
                   ajouterBien.Parent = this.Parent;
@@ -153,7 +151,6 @@ namespace Pollux.UserInterface
                 }
                 else
                 {
-                    ajoutBien = false;  // ça sera un souhait
                     // le controle si la comboBox est à null pas vraiment utile si on fixe la 1ere ligne par défaut
                     // vérification si ce client a déjà un agent assigné dans le cas où il existe déjà
                     client.Agent = (Agent)comboBoxAgents.SelectedItem;
@@ -198,7 +195,33 @@ namespace Pollux.UserInterface
             }
         }
 
-       
+        #region Activation bouton Créer
+        private void activationBoutonCreer()
+        {
+            if (textBoxNom.Text != "" && textBoxAdresse.Text != "" && textBoxTelephone.Text != "" && comboBoxVilles.SelectedItem != null)
+                buttonCreer.Enabled = true;
+            else
+                buttonCreer.Enabled = false;
+        }
+        private void textBoxNom_TextChanged(object sender, EventArgs e)
+        {
+            activationBoutonCreer();
+        }
+        private void textBoxAdresse_TextChanged(object sender, EventArgs e)
+        {
+            activationBoutonCreer();
+        }
+        private void comboBoxVilles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            activationBoutonCreer();
+        }
+        private void textBoxTelephone_TextChanged(object sender, EventArgs e)
+        {
+            activationBoutonCreer();
+        }
+        #endregion
+
+
 
     }
 }
