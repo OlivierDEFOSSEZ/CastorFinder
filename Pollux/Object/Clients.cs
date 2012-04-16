@@ -80,13 +80,5 @@ namespace Pollux.Object
         {
             return m_nom ;
         }
-
-        public bool Toto(Agent a)
-        {
-            if (a == m_agent)
-                return true;
-            else return false;
-        }
-
     }
 }
