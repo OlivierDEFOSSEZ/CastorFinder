@@ -76,10 +76,6 @@ namespace Pollux.UserInterface
             }
         }
 
-        private void buttonAnnuler_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
 
 
         // A FINIR
@@ -103,6 +99,11 @@ namespace Pollux.UserInterface
             }
             else
                 MessageBox.Show("Ajout du bien non effectué", "Echec");
+            this.Hide();
+        }
+
+        private void buttonAnnuler_Click(object sender, EventArgs e)
+        {
             this.Hide();
         }
 

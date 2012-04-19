@@ -31,6 +31,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.listBoxBiens = new System.Windows.Forms.ListBox();
             this.groupBoxBiens = new System.Windows.Forms.GroupBox();
+            this.buttonAnnuler = new System.Windows.Forms.Button();
             this.groupBoxBiens.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             // groupBoxBiens
             // 
             this.groupBoxBiens.Controls.Add(this.listBoxBiens);
+            this.groupBoxBiens.Controls.Add(this.buttonAnnuler);
             this.groupBoxBiens.Controls.Add(this.button2);
             this.groupBoxBiens.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxBiens.Location = new System.Drawing.Point(0, 30);
@@ -62,6 +64,17 @@
             this.groupBoxBiens.TabIndex = 9;
             this.groupBoxBiens.TabStop = false;
             this.groupBoxBiens.Text = "Afficher les biens";
+            // 
+            // buttonAnnuler
+            // 
+            this.buttonAnnuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonAnnuler.Location = new System.Drawing.Point(286, 212);
+            this.buttonAnnuler.Name = "buttonAnnuler";
+            this.buttonAnnuler.Size = new System.Drawing.Size(78, 23);
+            this.buttonAnnuler.TabIndex = 4;
+            this.buttonAnnuler.Text = "Annuler";
+            this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
             // UCListeBiens
             // 
@@ -81,5 +94,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox listBoxBiens;
         private System.Windows.Forms.GroupBox groupBoxBiens;
+        private System.Windows.Forms.Button buttonAnnuler;
     }
 }

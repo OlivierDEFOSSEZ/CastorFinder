@@ -33,7 +33,7 @@
             this.comboBoxAcheteur = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.buttonAddVilles = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAnnuler = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.groupBoxAjoutSouhaits.Controls.Add(this.comboBoxAcheteur);
             this.groupBoxAjoutSouhaits.Controls.Add(this.label12);
             this.groupBoxAjoutSouhaits.Controls.Add(this.buttonAddVilles);
-            this.groupBoxAjoutSouhaits.Controls.Add(this.button2);
+            this.groupBoxAjoutSouhaits.Controls.Add(this.buttonAnnuler);
             this.groupBoxAjoutSouhaits.Controls.Add(this.button1);
             this.groupBoxAjoutSouhaits.Controls.Add(this.label3);
             this.groupBoxAjoutSouhaits.Controls.Add(this.label2);
@@ -119,16 +119,16 @@
             this.buttonAddVilles.UseVisualStyleBackColor = true;
             this.buttonAddVilles.Click += new System.EventHandler(this.buttonAddVilles_Click);
             // 
-            // button2
+            // buttonAnnuler
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(375, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Annuler";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonAnnuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonAnnuler.Location = new System.Drawing.Point(375, 175);
+            this.buttonAnnuler.Name = "buttonAnnuler";
+            this.buttonAnnuler.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnnuler.TabIndex = 4;
+            this.buttonAnnuler.Text = "Annuler";
+            this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
             // button1
             // 
@@ -278,7 +278,7 @@
 
         private System.Windows.Forms.GroupBox groupBoxAjoutSouhaits;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

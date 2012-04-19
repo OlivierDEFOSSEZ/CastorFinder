@@ -75,9 +75,10 @@ namespace Pollux.UserInterface
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
+
     }
 }

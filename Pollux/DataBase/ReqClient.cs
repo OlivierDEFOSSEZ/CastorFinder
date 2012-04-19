@@ -11,6 +11,11 @@ namespace Pollux.DataBase
 {
     static public partial class SqlDataProvider  
     {
+        /// <summary>
+        /// méthode obsolète, remplacée par ajouterBienEtClient(Client, Bien) et ajouterSouhaitEtClient(Souhait, Bien)
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         static public bool ajouterClient(Client c)
         {
             bool ajout;

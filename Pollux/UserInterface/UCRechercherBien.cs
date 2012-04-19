@@ -52,7 +52,7 @@ namespace Pollux.UserInterface
 
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {
-            this.Parent = null;
+            this.Hide();
         }
 
         private void buttonAjoutVille_Click(object sender, EventArgs e)

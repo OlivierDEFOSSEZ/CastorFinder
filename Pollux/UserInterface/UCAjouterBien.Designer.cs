@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBoxAjoutBien = new System.Windows.Forms.GroupBox();
+            this.dateMiseEnVente = new System.Windows.Forms.DateTimePicker();
+            this.label27 = new System.Windows.Forms.Label();
             this.buttonAjoutVille = new System.Windows.Forms.Button();
             this.comboBoxVille = new System.Windows.Forms.ComboBox();
             this.comboBoxProprietaire = new System.Windows.Forms.ComboBox();
@@ -56,6 +58,8 @@
             // 
             // groupBoxAjoutBien
             // 
+            this.groupBoxAjoutBien.Controls.Add(this.dateMiseEnVente);
+            this.groupBoxAjoutBien.Controls.Add(this.label27);
             this.groupBoxAjoutBien.Controls.Add(this.buttonAjoutVille);
             this.groupBoxAjoutBien.Controls.Add(this.comboBoxVille);
             this.groupBoxAjoutBien.Controls.Add(this.comboBoxProprietaire);
@@ -82,6 +86,23 @@
             this.groupBoxAjoutBien.TabIndex = 7;
             this.groupBoxAjoutBien.TabStop = false;
             this.groupBoxAjoutBien.Text = "Ajouter un bien";
+            // 
+            // dateMiseEnVente
+            // 
+            this.dateMiseEnVente.Location = new System.Drawing.Point(104, 183);
+            this.dateMiseEnVente.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dateMiseEnVente.Name = "dateMiseEnVente";
+            this.dateMiseEnVente.Size = new System.Drawing.Size(153, 20);
+            this.dateMiseEnVente.TabIndex = 25;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(12, 189);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(81, 13);
+            this.label27.TabIndex = 24;
+            this.label27.Text = "Date de vente :";
             // 
             // buttonAjoutVille
             // 
@@ -112,7 +133,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 159);
+            this.label10.Location = new System.Drawing.Point(12, 159);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(32, 13);
             this.label10.TabIndex = 5;
@@ -157,7 +178,7 @@
             // buttonAnnuler
             // 
             this.buttonAnnuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonAnnuler.Location = new System.Drawing.Point(323, 187);
+            this.buttonAnnuler.Location = new System.Drawing.Point(324, 188);
             this.buttonAnnuler.Name = "buttonAnnuler";
             this.buttonAnnuler.Size = new System.Drawing.Size(75, 23);
             this.buttonAnnuler.TabIndex = 4;
@@ -292,5 +313,7 @@
         private System.Windows.Forms.ComboBox comboBoxProprietaire;
         private System.Windows.Forms.ComboBox comboBoxVille;
         private System.Windows.Forms.Button buttonAjoutVille;
+        private System.Windows.Forms.DateTimePicker dateMiseEnVente;
+        private System.Windows.Forms.Label label27;
     }
 }

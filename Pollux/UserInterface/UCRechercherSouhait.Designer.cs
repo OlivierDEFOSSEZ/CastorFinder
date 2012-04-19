@@ -33,7 +33,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.comboBoxVilles = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAnnuler = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.textBoxRechBienJardin = new System.Windows.Forms.TextBox();
@@ -58,7 +58,7 @@
             this.groupBoxRechSouhait.Controls.Add(this.label13);
             this.groupBoxRechSouhait.Controls.Add(this.comboBoxVilles);
             this.groupBoxRechSouhait.Controls.Add(this.label17);
-            this.groupBoxRechSouhait.Controls.Add(this.button1);
+            this.groupBoxRechSouhait.Controls.Add(this.buttonAnnuler);
             this.groupBoxRechSouhait.Controls.Add(this.label18);
             this.groupBoxRechSouhait.Controls.Add(this.button3);
             this.groupBoxRechSouhait.Controls.Add(this.textBoxRechBienJardin);
@@ -115,14 +115,16 @@
             this.label17.TabIndex = 20;
             this.label17.Text = "m²";
             // 
-            // button1
+            // buttonAnnuler
             // 
-            this.button1.Location = new System.Drawing.Point(401, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Annuler";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonAnnuler.Location = new System.Drawing.Point(401, 180);
+            this.buttonAnnuler.Name = "buttonAnnuler";
+            this.buttonAnnuler.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnnuler.TabIndex = 4;
+            this.buttonAnnuler.Text = "Annuler";
+            this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
             // label18
             // 
@@ -253,7 +255,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxRechSouhait;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox checkBoxVilles;
         private System.Windows.Forms.CheckBox checkBoxJardin;

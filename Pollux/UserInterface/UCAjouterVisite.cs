@@ -29,5 +29,10 @@ namespace Pollux.UserInterface
             }
         }
         #endregion
+
+        private void buttonAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -33,7 +33,6 @@ namespace Pollux
             else
                 toolStripStatusLabel.Text = "Attention : impossible de se connecter à la base de données";
         }
-
         #region Fenetres
         private void init()
         {
